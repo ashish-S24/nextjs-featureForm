@@ -31,7 +31,7 @@ const FormSelect: React.FC<IFormSelectProps> = ({
 }) => {
   const theme = useTheme();
   const menuPortalTargetRef = useRef(null);
-  const [bodyElement ,setBodyElement] = useState(null);
+  const [bodyElement, setBodyElement] = useState<HTMLElement | null>(null);
 
   useEffect(() => {
     setBodyElement(document.body);
