@@ -39,7 +39,7 @@ const JobDetailsForm: React.FC<{
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     handleFormik(e);
-    setState((prevState: { jobDetails: any; }) => ({
+    setState((prevState) => ({
       ...prevState,
       jobDetails: {
         ...prevState.jobDetails,

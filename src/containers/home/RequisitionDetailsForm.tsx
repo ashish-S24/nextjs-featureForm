@@ -49,7 +49,7 @@ const RequisitionDetailsForm: React.FC<{
     const { name, value } = e.target;
     handleFormik(e);
     setFieldValue(name, value); // Call Formik's setFieldValue
-    setState((prevState: { requisitionDetails: any; }) => ({
+    setState((prevState) => ({
       ...prevState,
       requisitionDetails: {
         ...prevState.requisitionDetails,
@@ -60,7 +60,7 @@ const RequisitionDetailsForm: React.FC<{
 
   const handleSelectChange = (name: string, value: string) => {
     setFieldValue(name, value); // Call Formik's setFieldValue
-    setState((prevState: { requisitionDetails: any; }) => ({
+    setState((prevState) => ({
       ...prevState,
       requisitionDetails: {
         ...prevState.requisitionDetails,

@@ -15,7 +15,7 @@ import { useData } from "./DataProvider";
 const InterviewDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
 }> = ({ handleTab }) => {
-  const { state, setState } = useData();
+  const { state , setState } = useData();
   const {
     errors,
     touched,
@@ -46,7 +46,7 @@ const InterviewDetailsForm: React.FC<{
 
   const handleSelectChange = (name: string, value: string) => {
     setFieldValue(name, value); // Call Formik's setFieldValue
-    setState((prevState: { interviewSettings: any; }) => ({
+    setState((prevState) => ({
       ...prevState,
       interviewSettings: {
         ...prevState.interviewSettings,
