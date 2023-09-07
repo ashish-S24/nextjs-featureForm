@@ -14,7 +14,7 @@ const RequisitionDetailsForm: React.FC<{
 }> = ({ handleTab }) => {
   const { state, setState } = useData();
   const {
-    handleChange: useFormikHandle,
+    handleChange: handleFormik,
     errors,
     touched,
     handleBlur,
@@ -47,7 +47,7 @@ const RequisitionDetailsForm: React.FC<{
 
   const handleChangeFormik = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    useFormikHandle(e);
+    handleFormik(e);
     setFieldValue(name, value); // Call Formik's setFieldValue
     setState((prevState) => ({
       ...prevState,

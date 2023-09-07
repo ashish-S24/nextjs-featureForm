@@ -12,7 +12,7 @@ const JobDetailsForm: React.FC<{
 }> = ({ handleTab }) => {
   const { state, setState } = useData();
   const {
-    handleChange: useFormikHandle,
+    handleChange: handleFormik,
     errors,
     touched,
     handleBlur,
@@ -37,7 +37,7 @@ const JobDetailsForm: React.FC<{
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    useFormikHandle(e);
+    handleFormik(e);
     setState((prevState) => ({
       ...prevState,
       jobDetails: {
