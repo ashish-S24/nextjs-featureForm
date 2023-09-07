@@ -4,7 +4,7 @@ import FromWrapper from "./FormWrapper";
 import { IFormInputProps } from "@src/interface/forms";
 import ReactSelect, { Props } from "react-select";
 import { Provider } from "react-redux";
-import { menuPortalCSS } from "react-select";
+import { menuPortalCSS } from "react-select/dist/declarations/src/components/Menu";
 
 interface IFormSelectProps
   extends Omit<IFormInputProps, "inputProps" | "type" | "onChange" | "onBlur"> {
