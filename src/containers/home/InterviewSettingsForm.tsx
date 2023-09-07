@@ -46,7 +46,7 @@ const InterviewDetailsForm: React.FC<{
 
   const handleSelectChange = (name: string, value: string) => {
     setFieldValue(name, value); // Call Formik's setFieldValue
-    setState((prevState) => ({
+    setState((prevState: { interviewSettings: any; }) => ({
       ...prevState,
       interviewSettings: {
         ...prevState.interviewSettings,

@@ -10,7 +10,8 @@ import { useData } from "./DataProvider";
 const JobDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
 }> = ({ handleTab }) => {
-  const { state, setState } = useData();
+   const { state, setState } = useData();
+  
   const {
     handleChange: handleFormik,
     errors,
@@ -38,7 +39,7 @@ const JobDetailsForm: React.FC<{
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     handleFormik(e);
-    setState((prevState) => ({
+    setState((prevState: { jobDetails: any; }) => ({
       ...prevState,
       jobDetails: {
         ...prevState.jobDetails,

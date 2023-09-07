@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 
+
 const initialValues = {
   requisitionDetails: {
     gender: "",
@@ -18,6 +19,7 @@ const initialValues = {
     interviewMode: "",
   },
 };
+
 
 const DataContext = createContext<{
   state: typeof initialValues;

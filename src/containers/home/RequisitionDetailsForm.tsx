@@ -7,12 +7,12 @@ import * as Yup from "yup";
 import { PageNumbers } from "../../interface/home";
 import { IRequisitionDetails } from "../../interface/forms";
 import { genderOptions, urgencyOptions } from "./constants";
-import { useData } from "./DataProvider";
+import { useData  } from "./DataProvider";
 
 const RequisitionDetailsForm: React.FC<{
   handleTab: (n: PageNumbers) => void;
 }> = ({ handleTab }) => {
-  const { state, setState } = useData();
+  const {state, setState} = useData();
   const {
     handleChange: handleFormik,
     errors,
@@ -49,7 +49,7 @@ const RequisitionDetailsForm: React.FC<{
     const { name, value } = e.target;
     handleFormik(e);
     setFieldValue(name, value); // Call Formik's setFieldValue
-    setState((prevState) => ({
+    setState((prevState: { requisitionDetails: any; }) => ({
       ...prevState,
       requisitionDetails: {
         ...prevState.requisitionDetails,
@@ -60,7 +60,7 @@ const RequisitionDetailsForm: React.FC<{
 
   const handleSelectChange = (name: string, value: string) => {
     setFieldValue(name, value); // Call Formik's setFieldValue
-    setState((prevState) => ({
+    setState((prevState: { requisitionDetails: any; }) => ({
       ...prevState,
       requisitionDetails: {
         ...prevState.requisitionDetails,
